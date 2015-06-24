@@ -4,11 +4,12 @@
   By registering with Bike Alert you are able to receive alerts for stolen bikes and also add your own bike if it's stolen.
 </p>
 
-<form id="form_id" action="index.html" method="post">
+<form>
   <div class="form-group">
     <label for="name">Name</label>
     <p>{{input class="form-control" placeholder="bob dole" type="text" value=name}}</p>
     <label for="phone"> Phone </label>
     <p>{{input class="form-control" placeholder="5555555555" type="text" value=phone}}</p>
   </div>
+  <button class="btn btn-primary" {{action 'save'}}>Add User</button>
 </form>
