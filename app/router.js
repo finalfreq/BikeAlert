@@ -10,7 +10,7 @@ Router.map(function() {
   this.resource('bikes');
   this.resource('add-user');
   this.resource('users');
-  this.resource('user', {path: 'users/user_id'}, function() {
+  this.resource('user', {path: '/users/:user_id'}, function() {
     this.resource('add-bike')
   });
 });
