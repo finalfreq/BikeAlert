@@ -10,7 +10,8 @@ export default Ember.Controller.extend({
         serial: this.get('serial'),
         address: this.get('address'),
         image: this.get('image'),
-        lost: this.set('true')
+        lost: this.set('true'),
+        date: new Date()
       });
       var user = this.get('controllers.user.model');
       newBike.save().then(function(){
