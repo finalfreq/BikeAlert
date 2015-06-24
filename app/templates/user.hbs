@@ -13,8 +13,9 @@
     <div class="col-md-6 col-md-offset-2">
       <p>Color: {{bike.color}}</p>
       <p>Make: {{bike.make}}</p>
-      <p>Location: {{bike.location}}</p>
+      <p>Address: {{bike.address}}</p>
       <p>Serial Number: {{bike.serial}}</p>
+      <p>{{google-map address=model.address}}</p>
     </div>
   </div>
 {{/each}}
