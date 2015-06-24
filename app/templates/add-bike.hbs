@@ -1,0 +1,19 @@
+<h1>Oh no! What bike was stolen?</h1>
+
+<p class="lead">
+  Hurry and get the word out!
+</p>
+
+<form>
+  <div class="form-group">
+    <label for="name">Color</label>
+    <p>{{input class="form-control" placeholder="Bike color..." type="text" value=color}}</p>
+    <label for="Model"> Model </label>
+    <p>{{input class="form-control" placeholder="Trek, Schwinn, etc." type="text" value=model}}</p>
+    <label for="serial"> Serial Number </label>
+    <p>{{input class="form-control" placeholder="" type="text" value=serial}}</p>
+    <label for="location"> Location </label>
+    <p>{{input class="form-control" placeholder="Address..." type="text" value=location}}</p>
+  </div>
+  <button class="btn btn-primary" {{action 'save'}}>Add Bike</button>
+</form>
