@@ -1,1 +1,26 @@
-<h1>I'm a user page lol</h1>
+<h1 class="page-header text-center">Hello {{model.name}}</h1>
+
+<h3>Add Stolen Bike</h3>
+{{#link-to 'add-bike'}} Add Bike {{/link-to}}
+{{outlet}}
+
+{{#if model.bikes}}
+{{#each model.bikes as |bike|}}
+<ul>
+  <div class="row">
+    <div class="col-md-6">
+      <li>{{bike.color}}</li>
+      <li>{{bike.make}}</li>
+    </div>
+    <div class="col-md-6">
+      <li>{{bike.location}}</li>
+      <li>{{bike.serial}}</li>
+    </div>
+  </div>
+</ul>
+{{/each}}
+
+{{else}}
+Currently no bikes are listed stolen
+
+{{/if}}
