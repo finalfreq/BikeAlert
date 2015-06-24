@@ -1,1 +1,25 @@
-<h1>I'm a user page lol</h1>
+<h1 class="page-header text-center">Hello {{model.name}}</h1>
+
+<h3>Add Stolen Bike</h3>
+{{#link-to 'add-bike'}} Add Bike {{/link-to}}
+{{outlet}}
+
+{{#if model.bikes}}
+{{#each model.bikes as |bike|}}
+  <div class="row clearfix well">
+    <div class="col-md-4">
+      <img class="bike-image" src="{{bike.image}}"/>
+    </div>
+    <div class="col-md-6 col-md-offset-2">
+      <p>Color: {{bike.color}}</p>
+      <p>Make: {{bike.make}}</p>
+      <p>Location: {{bike.location}}</p>
+      <p>Serial Number: {{bike.serial}}</p>
+    </div>
+  </div>
+{{/each}}
+
+{{else}}
+Currently no bikes are listed stolen
+
+{{/if}}
