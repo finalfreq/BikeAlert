@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'bike-alert',
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' wss://*.firebaseio.com" },
-    firebase: 'https:bikealert.firebaseio.com/',
+    firebase: 'https://bikealert.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
