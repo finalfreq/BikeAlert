@@ -7,5 +7,6 @@ export default DS.Model.extend({
   location: DS.attr('string'),
   date: DS.attr('date'),
   lost: DS.attr('boolean'),
+  image: DS.attr('string'),
   user: DS.belongsTo('user', { async: true })
 });

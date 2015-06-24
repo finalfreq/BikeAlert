@@ -6,18 +6,17 @@
 
 {{#if model.bikes}}
 {{#each model.bikes as |bike|}}
-<ul>
-  <div class="row">
-    <div class="col-md-6">
-      <li>{{bike.color}}</li>
-      <li>{{bike.make}}</li>
+  <div class="row clearfix well">
+    <div class="col-md-4">
+      <img src="{{bike.image}}"/>
     </div>
-    <div class="col-md-6">
-      <li>{{bike.location}}</li>
-      <li>{{bike.serial}}</li>
+    <div class="col-md-6 col-md-offset-2">
+      <p>Color: {{bike.color}}</p>
+      <p>Make: {{bike.make}}</p>
+      <p>Location: {{bike.location}}</p>
+      <p>Serial Number: {{bike.serial}}</p>
     </div>
   </div>
-</ul>
 {{/each}}
 
 {{else}}

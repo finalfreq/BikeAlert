@@ -9,6 +9,7 @@ export default Ember.Controller.extend({
         make: this.get('make'),
         serial: this.get('serial'),
         location: this.get('location'),
+        image: this.get('image'),
         lost: this.set('true')
       });
       var user = this.get('controllers.user.model');
