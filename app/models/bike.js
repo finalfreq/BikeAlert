@@ -5,5 +5,6 @@ export default DS.Model.extend({
   model: DS.attr('string'),
   serial: DS.attr('string'),
   location: DS.attr('string'),
-  date: DS.attr('date')
+  date: DS.attr('date'),
+  user: DS.belongsTo('user')
 });
