@@ -1,6 +1,7 @@
 /* global require, module */
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var mandrill = require('mandrill-api/mandrill');
 
 var app = new EmberApp({
   'ember-cli-bootswatch': 'cerulean'
