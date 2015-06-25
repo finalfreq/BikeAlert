@@ -11,7 +11,8 @@ export default Ember.Controller.extend({
       newUser.save();
       this.setProperties({
         name: '',
-        phone: ''
+        phone: '',
+        email: ''
       });
       this.transitionToRoute('users');
     }

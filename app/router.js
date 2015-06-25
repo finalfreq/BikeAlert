@@ -15,7 +15,9 @@ Router.map(function() {
   this.resource('user', {path: '/users/:user_id'}, function() {
     this.resource('add-bike');
   });
-  this.resource('bike', {path: 'bike/:bike_id'});
+  this.resource('bike', {path: 'bike/:bike_id'}, function() {
+    this.resource('new-message');
+  });
   this.route('city-view');
 });
 

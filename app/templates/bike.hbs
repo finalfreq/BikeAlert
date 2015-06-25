@@ -16,3 +16,18 @@
     {{/if}}
   </div>
 </div>
+
+<h2>Messages:</h2>
+
+<div class="well">
+  <ul class="unstyled-list">
+    {{#each model.messages as |message|}}
+      <li>{{message.text}}</li>
+      <hr>
+    {{/each}}
+  </ul>
+</div>
+
+{{#link-to 'new-message'}}Add message{{/link-to}}
+
+{{outlet}}
