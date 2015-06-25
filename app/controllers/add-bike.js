@@ -14,6 +14,7 @@ export default Ember.Controller.extend({
         date: new Date()
       });
       var user = this.get('controllers.user.model');
+      newBike.set('user', user);
       newBike.save().then(function(){
         user.get('bikes').pushObject(newBike);
         user.save()

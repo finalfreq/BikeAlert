@@ -47,7 +47,25 @@
 <h1 class="text-center">Registered bikes for {{model.name}}</h1>
 {{#each model.bikes as |bike|}}
   {{#if bike.lost}}
-<div class="row clearfix well">
+  <h1>Lost bikes</h1>
+  {{#link-to 'bike' bike.id}}
+    <div class="row clearfix well">
+      <div class="col-md-4">
+        <img class="bike-image" src="{{bike.image}}"/>
+      </div>
+      <div class="col-md-6 col-md-offset-2">
+        <p>Color: {{bike.color}}</p>
+        <p>Make: {{bike.make}}</p>
+        <p>Address: {{bike.address}}</p>
+        <p>Serial Number: {{bike.serial}}</p>
+        <p>Date lost: {{bike.date}}</p>
+        <p>{{google-map address=model.address}}</p>
+      </div>
+    </div>
+  {{/link-to}}
+{{else}}
+<h1>Found bikes</h1>
+<div id= "found" class="row clearfix well">
   <div class="col-md-4">
     <img class="bike-image" src="{{bike.image}}"/>
   </div>
@@ -60,8 +78,6 @@
     <p>{{google-map address=model.address}}</p>
   </div>
 </div>
-{{else}}
-
 {{/if}}
 {{/each}}
 

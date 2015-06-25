@@ -1,0 +1,11 @@
+<h1>Success Stories</h1>
+
+{{#each model as |bike|}}
+  {{#if bike.lost}}
+
+  {{else}}
+    <ul>
+      <li>{{#link-to 'user' bike.user.id}}{{bike.user.name}}{{/link-to}} has been reunited with {{bike.make}}</li>
+    </ul>
+  {{/if}}
+{{/each}}

@@ -11,6 +11,7 @@ Router.map(function() {
   this.resource('add-user');
   this.resource('subscribe');
   this.resource('users');
+  this.resource('success');
   this.resource('user', {path: '/users/:user_id'}, function() {
     this.resource('add-bike')
   });
