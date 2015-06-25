@@ -8,6 +8,12 @@ body  {
   height: 50%;
 }
 
+<<<<<<< HEAD
 #found {
   background: green;
+=======
+.map-canvas {
+  width: 400px;
+  height: 300px;
+>>>>>>> 2b6616956e5c40635d6d2003251bc20b8c562b33
 }
