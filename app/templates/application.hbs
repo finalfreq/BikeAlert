@@ -22,7 +22,7 @@
   </div>
 </nav>
 {{#if model}}
-<marquee>{{model.lastObject.color}} {{model.lastObject.make}} lost on {{model.lastObject.date}} around {{model.lastObject.address}}</marquee>
+<marquee>{{model.lastObject.color}} {{model.lastObject.make}} {{format-date model.lastObject.date}} around {{model.lastObject.address}} </marquee>
 {{else}}
 
 {{/if}}
