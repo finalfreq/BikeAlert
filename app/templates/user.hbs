@@ -65,20 +65,7 @@
   {{/link-to}}
 {{else}}
 <h1>Found bikes</h1>
-<div id= "found" class="row clearfix well">
-  <div class="row clearfix well">
-    <div class="col-md-4">
-      <img class="bike-image" src="{{bike.image}}"/>
-    </div>
-    <div class="col-md-6 col-md-offset-2">
-      <p>Color: {{bike.color}}</p>
-      <p>Make: {{bike.make}}</p>
-      <p>Address: {{bike.address}}</p>
-      <p>Serial Number: {{bike.serial}}</p>
-      <p>{{google-map address=bike.address}}</p>
-    </div>
-
-<div class="row clearfix well">
+<div class="found" class="row clearfix well">
   <div class="col-md-4">
     <img class="bike-image" src="{{bike.image}}"/>
   </div>
