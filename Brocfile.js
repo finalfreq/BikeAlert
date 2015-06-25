@@ -1,6 +1,7 @@
 /* global require, module */
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var mandrill = require('mandrill-api/mandrill');
 
 var app = new EmberApp({
   'ember-cli-bootswatch': 'cerulean'
@@ -18,4 +19,5 @@ var app = new EmberApp({
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 app.import('vendor/gmaps.js');
+app.import('bower_components/moment/min/moment.min.js');
 module.exports = app.toTree();

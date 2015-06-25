@@ -11,7 +11,7 @@ export default Ember.Controller.extend({
         address: this.get('address'),
         image: this.get('image'),
         lost: this.set('true'),
-        date: new Date().toDateString()
+        date: new Date()
       });
       var user = this.get('controllers.user.model');
       newBike.save().then(function(){
