@@ -8,9 +8,10 @@ export default Ember.Controller.extend({
         color: this.get('color'),
         make: this.get('make'),
         serial: this.get('serial'),
-        location: this.get('location'),
+        address: this.get('address'),
         image: this.get('image'),
-        lost: this.set('true')
+        lost: this.set('true'),
+        date: new Date().toDateString()
       });
       var user = this.get('controllers.user.model');
       newBike.save().then(function(){
@@ -21,7 +22,7 @@ export default Ember.Controller.extend({
         color: '',
         make: '',
         serial: '',
-        location: ''
+        address: ''
       });
       this.transitionToRoute('users');
     }

@@ -1,1 +1,11 @@
-<h1>hi im a bike</h1>
+<h1 class="page-header text-center"> All lost bikes</h1>
+
+{{#each model as |bike|}}
+  {{#if bike.lost}}
+    <ul>
+      <li>{{bike.make}}</li>
+    </ul>
+  {{else}}
+
+  {{/if}}
+{{/each}}
