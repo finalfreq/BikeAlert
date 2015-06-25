@@ -12,8 +12,9 @@ Router.map(function() {
   this.resource('subscribe');
   this.resource('users');
   this.resource('user', {path: '/users/:user_id'}, function() {
-    this.resource('add-bike')
+    this.resource('add-bike');
   });
+  this.route('city-view');
 });
 
 export default Router;

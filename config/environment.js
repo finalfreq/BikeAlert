@@ -21,11 +21,11 @@ module.exports = function(environment) {
     },
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
-      'font-src': "'self'",
-      'connect-src': "'self'",
-      'img-src': "'self'",
-      'style-src': "'self' 'unsafe-inline'",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' https://*.googleapis.com https://*.gstatic.com http://*.gstatic.com",
+      'font-src': "'self' https://fonts.gstatic.com",
+      'connect-src': "'self' wss://*.firebaseio.com",
+      'img-src': "'self' https://*.googleapis.com https://*.gstatic.com",
+      'style-src': "'self' 'unsafe-inline' https://fonts.googleapis.com/",
       'frame-src': "'none'"
     }
   };
