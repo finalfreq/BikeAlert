@@ -1,0 +1,9 @@
+<h1>Here's where bikes have been stolen from</h1>
+
+
+
+  <div class="row clearfix well">
+    {{#each bike in model}}
+    <p>{{google-map address=bike.address}}</p>
+    {{/each}}
+  </div>

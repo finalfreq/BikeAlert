@@ -17,12 +17,17 @@
         <li>{{#link-to 'bikes'}}Bikes{{/link-to}}</li>
         <li>{{#link-to 'add-user'}}Register{{/link-to}}</li>
         <li>{{#link-to 'users'}}Users{{/link-to}}</li>
+        <li>{{#link-to 'city-view'}}City View{{/link-to}}</li>
       </ul>
     </div>
   </div>
 </nav>
 {{#if model}}
-<marquee>{{model.lastObject.color}} {{model.lastObject.make}} lost on {{model.lastObject.date}} around {{model.lastObject.address}}</marquee>
+<<<<<<< HEAD
+  <marquee>{{model.lastObject.color}} {{model.lastObject.make}} lost on {{model.lastObject.date}} around {{model.lastObject.address}}</marquee>
+=======
+<marquee>{{model.lastObject.color}} {{model.lastObject.make}} {{format-date model.lastObject.date}} around {{model.lastObject.address}} </marquee>
+>>>>>>> 2c0ba456d1031deca078274a282e460f91653c26
 {{else}}
 
 {{/if}}
