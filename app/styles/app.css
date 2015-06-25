@@ -4,8 +4,8 @@ body  {
 
 
 .bike-image {
-  width: 70%;
-  height: 70%;
+  width: 99%;
+  height: 99%;
 }
 
 #found {
@@ -24,3 +24,11 @@ body  {
 ul.unstyled-list li {
   list-style: none;
 }
+
+/*li { 
+  background: green;
+}
+
+li:nth-child(odd) {
+  background: red;
+}*/

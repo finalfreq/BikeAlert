@@ -6,12 +6,15 @@ export default Ember.Controller.extend({
     save: function() {
       var bike = this.get('controllers.bike.model');
       var newMessage = this.store.createRecord('message', {
-        text: this.get('text')
+        name: this.get('name'),
+        text: this.get('text'),
+        date: new Date()
       });
 
       newMessage.save().then(function() {
         bike.get('messages').pushObject(newMessage);
         bike.save();
+
       });
 
       this.setProperties({
