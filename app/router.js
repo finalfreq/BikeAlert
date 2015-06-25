@@ -14,6 +14,7 @@ Router.map(function() {
   this.resource('user', {path: '/users/:user_id'}, function() {
     this.resource('add-bike')
   });
+  this.resource('bike', {path: 'bike/:bike_id'});
 });
 
 export default Router;

@@ -46,6 +46,7 @@
 {{#if model.bikes}}
 <h1 class="text-center">Registered bikes for {{model.name}}</h1>
 {{#each model.bikes as |bike|}}
+  {{#if bike.lost}}
 <div class="row clearfix well">
   <div class="col-md-4">
     <img class="bike-image" src="{{bike.image}}"/>
@@ -59,10 +60,12 @@
     <p>{{google-map address=model.address}}</p>
   </div>
 </div>
+{{else}}
+
+{{/if}}
 {{/each}}
 
 {{else}}
 Currently no bikes are listed stolen
 
 {{/if}}
-<button {{action 'test'}}></button>
