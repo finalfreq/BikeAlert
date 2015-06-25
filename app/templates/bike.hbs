@@ -1,0 +1,18 @@
+<div class="row clearfix well">
+  <div class="col-md-4">
+    <img class="bike-image" src="{{model.image}}"/>
+  </div>
+  <div class="col-md-6 col-md-offset-2">
+    <p>Color: {{model.color}}</p>
+    <p>Make: {{model.make}}</p>
+    <p>Address: {{model.address}}</p>
+    <p>Serial Number: {{model.serial}}</p>
+    <p>Date lost: {{model.date}}</p>
+    <p>{{google-map address=model.address}}</p>
+    {{#if found}}
+      <p>Bike found</p>
+    {{else}}
+      <button class="btn" {{action 'found'}}>Found</button>
+    {{/if}}
+  </div>
+</div>

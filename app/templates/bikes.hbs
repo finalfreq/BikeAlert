@@ -3,7 +3,7 @@
 {{#each model as |bike|}}
   {{#if bike.lost}}
     <ul>
-      <li>{{bike.make}}</li>
+      <li>{{#link-to 'bike' bike.id}}{{bike.make}} lost {{format-date bike.date}}{{/link-to}}</li>
     </ul>
   {{else}}
 

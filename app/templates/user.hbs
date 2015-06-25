@@ -46,7 +46,26 @@
 {{#if model.bikes}}
 <h1 class="text-center">Registered bikes for {{model.name}}</h1>
 {{#each model.bikes as |bike|}}
-<<<<<<< HEAD
+  {{#if bike.lost}}
+  <h1>Lost bikes</h1>
+  {{#link-to 'bike' bike.id}}
+    <div class="row clearfix well">
+      <div class="col-md-4">
+        <img class="bike-image" src="{{bike.image}}"/>
+      </div>
+      <div class="col-md-6 col-md-offset-2">
+        <p>Color: {{bike.color}}</p>
+        <p>Make: {{bike.make}}</p>
+        <p>Address: {{bike.address}}</p>
+        <p>Serial Number: {{bike.serial}}</p>
+        <p>Date lost: {{bike.date}}</p>
+        <p>{{google-map address=model.address}}</p>
+      </div>
+    </div>
+  {{/link-to}}
+{{else}}
+<h1>Found bikes</h1>
+<div id= "found" class="row clearfix well">
   <div class="row clearfix well">
     <div class="col-md-4">
       <img class="bike-image" src="{{bike.image}}"/>
@@ -58,7 +77,7 @@
       <p>Serial Number: {{bike.serial}}</p>
       <p>{{google-map address=bike.address}}</p>
     </div>
-=======
+
 <div class="row clearfix well">
   <div class="col-md-4">
     <img class="bike-image" src="{{bike.image}}"/>
@@ -70,13 +89,12 @@
     <p>Serial Number: {{bike.serial}}</p>
     <p>Date lost: {{bike.date}}</p>
     <p>{{google-map address=model.address}}</p>
->>>>>>> 2c0ba456d1031deca078274a282e460f91653c26
   </div>
 </div>
+{{/if}}
 {{/each}}
 
 {{else}}
 Currently no bikes are listed stolen
 
 {{/if}}
-<button {{action 'test'}}></button>
