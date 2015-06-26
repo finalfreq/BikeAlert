@@ -4,8 +4,8 @@ body  {
 
 
 .bike-image, #bike-image {
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
 }
 
 #found {
@@ -37,4 +37,29 @@ ul.unstyled-list li {
 
 #stripe ul li:nth-child(odd) {
   background: red;
+}
+
+
+.all-bikes img {
+  max-width: 90%;
+  border-radius: 4px;
+  height: 185px;
+  width: 285px;
+  margin: 1em 2% .2em 2%;
+}
+
+
+.all-bikes {
+  background-color: #ddd;
+  box-shadow: 4px 3px 5px #888888;
+  border: 0px solid #523628;
+  border-radius: 6px;
+  margin: .65em 1%;
+  padding: 0;
+  list-style: none;
+  float: left;
+  width: 31%;
+  height: auto;
+  position: relative;
+  text-align: center;
 }

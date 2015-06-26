@@ -1,5 +1,5 @@
 <h1 class="page-header text-center"> All lost bikes</h1>
-
+<!--
 {{#each model as |bike|}}
   {{#if bike.lost}}
     <ul>
@@ -8,4 +8,14 @@
   {{else}}
 
   {{/if}}
+{{/each}} -->
+
+
+{{#each model as |bike|}}
+  <ul>
+    <li class="all-bikes">
+      {{#link-to 'bike' bike.id}}<img {{bind-attr src=bike.image}}>
+      <h3>{{bike.make}}</h3>{{/link-to}}
+    </li>
+  </ul>
 {{/each}}
