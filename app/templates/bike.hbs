@@ -19,15 +19,16 @@
 
 <h2>Messages:</h2>
 {{#if model.messages}}
-<div class="well">
-  <ul class="unstyled-list">
     {{#each model.messages as |message|}}
-      <li>{{message.text}}</li>
-      <li><i>Posted {{calendar-date message.date}} by: {{message.name}} </i></li>
-      <hr>
+    <div class="row clearfix well" id="stripe">
+        <p>{{message.text}}</p>
+        <footer>
+          <p style="float:right;margin-bottom:0;"><i>Posted {{calendar-date message.date}} by: {{message.name}} </i></p>
+          <button style="float:left;margin-bottom:0;" class="btn btn-danger btn-xs" {{action 'delete' message}}>X</button>
+        </footer>
+    </div>
     {{/each}}
-  </ul>
-</div>
+
 {{else}}
   <p>No messages added yet.</p>
 {{/if}}

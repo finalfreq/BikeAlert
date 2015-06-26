@@ -4,8 +4,11 @@
   {{#if bike.lost}}
 
   {{else}}
-    <ul>
-      <li>{{#link-to 'user' bike.user.id}}{{bike.user.name}}{{/link-to}} has been reunited with {{bike.make}}</li>
-    </ul>
-  {{/if}}
+    <div class="row clearfix well">
+      <img id="bike-image" src="{{bike.image}}" alt="a picture of a bike" />
+
+      <p class="lead">{{#link-to 'user' bike.user.id}}{{bike.user.name}}{{/link-to}} has been reunited with {{bike.make}}</p>
+
+    </div>
+    {{/if}}
 {{/each}}

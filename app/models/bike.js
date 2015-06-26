@@ -8,6 +8,7 @@ export default DS.Model.extend({
   date: DS.attr('date'),
   lost: DS.attr('boolean'),
   image: DS.attr('string'),
+  story: DS.attr('string'),
   user: DS.belongsTo('user', { async: true }),
   messages: DS.hasMany('message', { async: true })
 });

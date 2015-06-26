@@ -14,6 +14,18 @@ export default Ember.Controller.extend({
       bike.save().then(function() {
         user.save();
       });
+    },
+    delete: function(message) {
+      if(confirm('are you sure you want to delete message?')) {
+        var bike = this.get('model');
+
+        this.store.find('message', message.get('id')).then(function(message){
+          message.destroyRecord();
+          message.save();
+        });
+
+        bike.save();
+      }
     }
   }
 });

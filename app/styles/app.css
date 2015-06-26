@@ -3,9 +3,9 @@ body  {
 }
 
 
-.bike-image {
-  width: 99%;
-  height: 99%;
+.bike-image, #bike-image {
+  width: 50%;
+  height: 50%;
 }
 
 #found {
@@ -25,10 +25,10 @@ ul.unstyled-list li {
   list-style: none;
 }
 
-/*li { 
+#stripe ul li:nth-child(even) {
   background: green;
 }
 
-li:nth-child(odd) {
+#stripe ul li:nth-child(odd) {
   background: red;
-}*/
+}
