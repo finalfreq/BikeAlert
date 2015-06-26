@@ -5,5 +5,6 @@
   <div class="row clearfix well">
     {{#each bike in model}}
     <p>{{google-map address=bike.address}}</p>
+    <p class="lead" style="float:right;">{{bike.address}}</p>
     {{/each}}
   </div>

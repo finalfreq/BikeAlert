@@ -10,6 +10,7 @@ body  {
 
 #found {
   background: #5A785A;
+  color: #FFB03B;
 }
 
 .map-canvas {
@@ -19,6 +20,11 @@ body  {
 
 #notFound {
   background: #B22400;
+  color: #FFF0A5;
+}
+
+#notFoundHover:hover {
+  text-decoration:underline;
 }
 
 ul.unstyled-list li {

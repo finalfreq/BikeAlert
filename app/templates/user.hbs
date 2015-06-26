@@ -49,15 +49,18 @@
     {{#if bike.lost}}
     {{#link-to 'bike' bike.id}}
       <div id="notFound" class="row clearfix well">
-        <div class="col-md-4">
+        <div class="col-md-6">
           <img class="bike-image" src="{{bike.image}}"/>
-        </div>
-        <div class="col-md-6 col-md-offset-2">
-          <p>Color: {{bike.color}}</p>
-          <p>Make: {{bike.make}}</p>
-          <p>Address: {{bike.address}}</p>
+          <div id="notFoundHover">
           <p>Serial Number: {{bike.serial}}</p>
           <p>Date lost: {{bike.date}}</p>
+          <p>Color: {{bike.color}}</p>
+          <p>Make: {{bike.make}}</p>
+        </div>
+        </div>
+        <div class="col-md-6 ">
+
+          <p>Address: {{bike.address}}</p>
           <p>{{google-map address=bike.address}}</p>
         </div>
       </div>
@@ -70,15 +73,16 @@
   {{#if bike.lost}}
   {{else}}
   <div id="found" class="row clearfix well">
-    <div class="col-md-4">
+    <div class="col-md-6">
       <img class="bike-image" src="{{bike.image}}"/>
-    </div>
-    <div class="col-md-6 col-md-offset-2">
       <p>Color: {{bike.color}}</p>
       <p>Make: {{bike.make}}</p>
-      <p>Address: {{bike.address}}</p>
       <p>Serial Number: {{bike.serial}}</p>
       <p>Date Found: {{bike.date}}</p>
+      <p class="lead"> {{bike.story}}</p>
+    </div>
+    <div class="col-md-6">
+      <p>Address: {{bike.address}}</p>
       <p>{{google-map address=bike.address}}</p>
     </div>
   </div>
