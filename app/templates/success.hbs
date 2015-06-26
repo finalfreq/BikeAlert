@@ -6,9 +6,10 @@
   {{else}}
     <div class="row clearfix well">
       <img id="bike-image" src="{{bike.image}}" alt="a picture of a bike" />
-
+      <p class="lead" style="float:right;font-weight:bold;">" {{bike.story}} "</p>
+      <footer>
       <p class="lead">{{#link-to 'user' bike.user.id}}{{bike.user.name}}{{/link-to}} has been reunited with {{bike.make}}</p>
-
+      </footer>
     </div>
     {{/if}}
 {{/each}}

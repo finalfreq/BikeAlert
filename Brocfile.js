@@ -19,5 +19,6 @@ var app = new EmberApp({
 // along with the exports of each module as its value.
 
 app.import('vendor/gmaps.js');
+app.import('bower_components/bootstrap/dist/js/bootstrap.min.js');
 app.import('bower_components/moment/min/moment.min.js');
 module.exports = app.toTree();

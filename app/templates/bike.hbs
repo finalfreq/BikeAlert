@@ -12,8 +12,28 @@
     {{#if found}}
       <p>Bike found</p>
     {{else}}
-      <button class="btn" {{action 'found'}}>Found</button>
+      <button class="btn" {{action 'show'}}>Found</button>
     {{/if}}
+  </div>
+</div>
+
+<div id="foundModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Edit Question</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="story">How was it found?</label>
+            {{textarea id="story" class="form-control" rows="6" value=story}}
+          </div>
+          <button type="submit" class="btn btn-success btn-block" data-dismiss="modal" {{action 'found'}}>Save</button>
+        </form>
+      </div>
+    </div>
   </div>
 </div>
 
