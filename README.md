@@ -1,7 +1,6 @@
 # Bike-alert
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+"Help I've fallen and someone has taken my bike" and thats what started Bike alert. We are an open source application that allows users to post information on their own bike being stolen and network with the community to find stolen bikes.
 
 ## Prerequisites
 
@@ -25,23 +24,15 @@ You will need the following things properly installed on your computer.
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
-### Code Generators
 
-Make use of the many generators for code, try `ember help generate` for more details
+## Contributors
 
-### Running Tests
+* James Williams: https://www.github.com/finalfreq
+* Chase Reckling: https://www.github.com/chasereckling
+* Kim Dang: https://www.github.com/kimdangg
+* Steve Bussert: https://www.github.com/strangetim
 
-* `ember test`
-* `ember test --server`
 
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
 
 ## Further Reading / Useful Links
 
@@ -50,4 +41,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
