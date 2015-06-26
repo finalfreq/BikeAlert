@@ -2,6 +2,8 @@
 
 {{#each model as |user|}}
   <ul>
-    <li>{{#link-to 'user' user.id}}{{user.name}}{{/link-to}}</li>
+    <li class="all-bikes">{{#link-to 'user' user.id}}<img src="assets/images/biker.png" />
+      <h3>{{user.name}}</h3>
+      {{/link-to}}</li>
   </ul>
 {{/each}}
